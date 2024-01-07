@@ -6,9 +6,9 @@ import { FaMicrophone } from "react-icons/fa";
 import { RiVideoAddLine } from "react-icons/ri";
 import { BsBell } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
-import { getSearchPageVideos } from "../store/reducers/getSearchPageVideos";
+import { getSearchPageVideos } from "../redux/reducers/getSearchPageVideos";
 import { useAppDispatch, useAppSelector } from "../hooks/useApp";
-import { changeSearchTerm, clearVideos } from "../features/youtube/youtubeSlice";
+import { changeSearchTerm, clearVideos } from "../redux/Slice/Slice1";
 
 export default function Navbar() {
   const location = useLocation();

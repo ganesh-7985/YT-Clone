@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import {parseData} from "../../utils/parseData";
 
-const API_KEY = process.env.REACT_APP_YOUTUBE_DATA_API_KEY;
+const API_KEY =import.meta.env.REACT_APP_YOUTUBE_DATA_API_KEY;
 
 export const getHomePageVideos = createAsyncThunk(
     "youtube/App/searchPageVideos",

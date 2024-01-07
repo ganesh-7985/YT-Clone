@@ -1,19 +1,17 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import { Routes,Route } from 'react-router'
 import Home from './pages/Home'
-import Sidebar from './components/Sidebar'
+import { BrowserRouter, Routes ,Route} from 'react-router-dom'
+import Search from './pages/Search'
+import Watch from './pages/Watch'
 
-function App() {
+export default function App() {
   return (
-    <div>
-     <Navbar/>
-     <Sidebar/>
-     <Routes>
-      <Route path="/" element={<Home/>}></Route>
-     </Routes>
-    </div>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/search' element={<Search/>}/>
+    <Route path='/watch/:id' element={<Watch/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
