@@ -6,7 +6,7 @@ export const parseVideoDuration = (duration) => {
     .replace("PT","")
     .replace("H",":")
     .replace("M",":")
-    .replace("S","")
+    .replace("S",":")
     .split(":");
 
     
